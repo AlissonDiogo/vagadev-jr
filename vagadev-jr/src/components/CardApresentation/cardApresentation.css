@@ -1,0 +1,29 @@
+.card-apresentation {
+  width: 400px;
+  display: inline-block;
+  margin-right: 20px;
+}
+.card-apresentation > img {
+  width: 400px;
+  display: block;
+}
+.card-apresentation > .legend {
+  background: linear-gradient(to right, #084154 2%, #3ec6e0 0);
+  /* padding-left: 10px; */
+  font-weight: 600;
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.card-apresentation > .legend > .horizontal-divider {
+  width: 120px;
+  height: 1px;
+  border-top: 1px solid #000;
+  margin-right: 15px;
+}

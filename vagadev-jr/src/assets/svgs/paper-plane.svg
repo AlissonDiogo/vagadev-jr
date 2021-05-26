@@ -7,12 +7,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="25.719"
-   height="25.719"
-   viewBox="0 0 25.719 25.719"
+   width="31.969"
+   height="29.237"
+   viewBox="0 0 31.969 29.237"
    version="1.1"
    id="svg3"
-   sodipodi:docname="search-solid.svg"
+   sodipodi:docname="paper-plane.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <metadata
      id="metadata9">
@@ -40,17 +40,17 @@
      inkscape:window-height="480"
      id="namedview5"
      showgrid="false"
-     inkscape:zoom="9.1760955"
-     inkscape:cx="12.8595"
-     inkscape:cy="12.8595"
-     inkscape:window-x="36"
-     inkscape:window-y="560"
+     inkscape:zoom="8.0719637"
+     inkscape:cx="15.9845"
+     inkscape:cy="14.6185"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg3" />
   <path
-     id="search-solid"
-     d="M19,3a9.995,9.995,0,0,0-7.75,16.313L3.281,27.281l1.438,1.438,7.969-7.969A10,10,0,1,0,19,3Zm0,2a8,8,0,1,1-8,8A7.985,7.985,0,0,1,19,5Z"
-     transform="translate(-3.281 -3)"
+     id="paper-plane"
+     d="M3.594,5.344l.438,1.875L5.969,16,4.031,24.781l-.437,1.875,1.781-.719,22-9L29.656,16l-2.281-.937-22-9ZM6.375,8.656,21.906,15H7.781ZM7.781,17H21.906L6.375,23.344Z"
+     transform="translate(-5.27 5.639) rotate(-21)"
      fill="#fff"
-     style="fill:#000000" />
+     style="fill:#ffffff" />
 </svg>
