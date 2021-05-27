@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+.card-container {
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
+  /* width: 33%; */
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.card-image {
+  /* width: 200px;
+    height: 200px; */
+  text-align: center;
+}
+.card-image img {
+  width: 100%;
+}
+.card-bottom {
+  padding: 10px;
+  background-color: #ebebeb;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 1px solid #3ec6e0;
+}
+.card-bottom > .product-title {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.card-bottom > .product-price {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+.card-bottom > .container-buy-button {
+  text-align: center;
+  margin-top: 10px;
+}
+.card-bottom > .container-buy-button > .buy-button {
+  border-radius: 5px;
+  background-color: #3ec6e0;
+  color: #fff;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+  width: 70%;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}

@@ -1,10 +1,16 @@
 //components
 import Navbar from "./components/Navbar";
 import CardApresentation from "./components/CardApresentation";
+import CardProduct from "./components/CardProduct";
+import CardGroup from "./components/CardGroup";
 
 import imageBanner1 from "./assets/img/principal_banner_desktop.jpg";
 import imageZelda from "./assets/img/zelda_banner.jpg";
 import imageSekiro from "./assets/img/sekiro_banner.jpg";
+import pointGroup from "./assets/svgs/pointGroup.svg";
+import product1 from "./assets/img/product-outriders.png";
+import product2 from "./assets/img/product-cyberpunk2077.png";
+import product3 from "./assets/img/product-donkey-kong-country.png";
 
 import "./styles/index.css";
 
@@ -12,6 +18,24 @@ function App() {
   const dataItensApresentation = [
     { image: imageZelda, legend: "The legend of Zelda - Breath of the wild" },
     { image: imageSekiro, legend: "SEKIRO - Shadows die twice" },
+  ];
+
+  const dataProducts = [
+    {
+      image: product1,
+      title: "Outriders",
+      price: 200,
+    },
+    {
+      image: product2,
+      title: "CYBERPUYNK 2077",
+      price: 200,
+    },
+    {
+      image: product3,
+      title: "Donkey Kong Country Tropical Freeze",
+      price: 200,
+    },
   ];
   return (
     <div>
@@ -32,21 +56,39 @@ function App() {
             </h3>
           </div>
         </div>
-        <div className="itens-apresentation">
-          <div className="container-itens">
-            {dataItensApresentation.map((item, index) => {
-              console.log(item);
-              return (
-                <CardApresentation
-                  legend={item.legend}
-                  image={item.image}
-                  key={index}
-                />
-              );
-            })}
+      </div>
+
+      <main>
+        <div className="container-main">
+          <div className="itens-apresentation">
+            <div className="container-itens">
+              {dataItensApresentation.map((item, index) => {
+                return (
+                  <CardApresentation
+                    legend={item.legend}
+                    image={item.image}
+                    key={index}
+                  />
+                );
+              })}
+            </div>
+          </div>
+          <div className="products">
+            <div className="products-header">
+              <img src={pointGroup} alt="Marcador" />{" "}
+              <span> Produtos em destaque</span>
+            </div>
+            <div className="list-products">
+              {/* <CardProduct
+                image={product1}
+                title={"CYBERPUNK 2077"}
+                price={200}
+              /> */}
+              <CardGroup data={dataProducts} />
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }

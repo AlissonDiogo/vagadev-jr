@@ -1,0 +1,40 @@
+div.tooltip {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  div.tooltip span {
+    position: absolute;
+    width: 240px;
+    font-size: 12px;
+    color: #ffffff;
+    background: #084154;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    /* visibility: hidden; */
+    display: none;
+    border-radius: 17px;
+  }
+  div.tooltip span:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #084154;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+  }
+  div:hover.tooltip span {
+    /* visibility: visible; */
+    display: block;
+    opacity: 0.9;
+    top: 30px;
+    left: 20%;
+    margin-left: -76px;
+    z-index: 999;
+  }
+  
