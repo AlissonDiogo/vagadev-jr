@@ -24,15 +24,29 @@ function Navbar() {
       <div className="nav-right">
         <ul>
           <li>
-            <img src={paperPlane} className="paperPlane" /> <span>CONTATO</span>
+            <img
+              src={paperPlane}
+              className="paperPlane"
+              alt="Ícone referente ao contato"
+            />{" "}
+            <span>CONTATO</span>
           </li>
           <span className="divider" />
           <li>
-            <img src={search} className="search" /> <span>BUSCAR</span>
+            <img
+              src={search}
+              className="search"
+              alt="Ícone referente ao buscador"
+            />{" "}
+            <span>BUSCAR</span>
           </li>
           <span className="divider" />
           <li>
-            <img src={shoppingBag} className="shoppingBag" />{" "}
+            <img
+              src={shoppingBag}
+              className="shoppingBag"
+              alt="Ícone referente a sacola de compras"
+            />
             <span className="bagde">
               <div className="bagde-value">2</div>
             </span>

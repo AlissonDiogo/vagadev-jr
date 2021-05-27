@@ -1,8 +1,8 @@
 //components
 import Navbar from "./components/Navbar";
 import CardApresentation from "./components/CardApresentation";
-import CardProduct from "./components/CardProduct";
 import CardGroup from "./components/CardGroup";
+import Footer from "./components/Footer";
 
 import imageBanner1 from "./assets/img/principal_banner_desktop.jpg";
 import imageZelda from "./assets/img/zelda_banner.jpg";
@@ -42,7 +42,7 @@ function App() {
       <Navbar />
       <div className="header">
         <div className="banner">
-          <img src={imageBanner1} />
+          <img src={imageBanner1} alt="Imagem banner"/>
           <div className="container-text">
             <h2 className="title-banner">MORTAL KOMBAT</h2>
             <h1 className="price-banner">
@@ -89,6 +89,7 @@ function App() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
