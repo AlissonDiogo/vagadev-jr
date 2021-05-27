@@ -50,3 +50,26 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+.card-bottom > .container-buy-button > .purchased-button {
+  border-radius: 5px;
+  background-color: #084154;
+  color: #fff;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+  width: 70%;
+  height: 35px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+.card-bottom > .container-buy-button > .purchased-button span {
+  position: relative;
+  width: 100%;
+}
+.card-bottom > .container-buy-button > .purchased-button img {
+  width: 50px;
+  position: absolute;
+  top: -40px;
+}

@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Tooltip from "../Tooltip";
 import { toMoney } from "vanilla-masker";
+
+import marioImage from "../../assets/img/marioImage.png";
+
 import "./cardProduct.css";
 
 function CardProduct(props) {
+  const [purchased, setPurchased] = useState(false);
+
+  const onClickBuy = () => {
+    if (!purchased) {
+      props.onClickBuy();
+      setPurchased(true);
+    }
+  };
   return (
     <div className="card-container">
       <div className="card-image">
@@ -22,8 +33,17 @@ function CardProduct(props) {
           {/* {"R$ " + toMoney(123)} */}
         </div>
         <div className="container-buy-button">
-          <button className="buy-button" onClick={() => props.onClickBuy()}>
-            COMPRAR
+          <button
+            className={purchased ? "purchased-button" : "buy-button"}
+            onClick={() => onClickBuy()}
+          >
+            {purchased ? (
+              <span>
+                COMPRADO! <img src={marioImage} alt="Imagem mário" />
+              </span>
+            ) : (
+              "COMPRAR"
+            )}
           </button>
         </div>
       </div>

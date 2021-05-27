@@ -91,6 +91,7 @@ function App() {
               /> */}
               <CardGroup
                 data={dataProducts}
+                purchased={visibleModal}
                 onClickBuy={() => setVisibleModal(true)}
               />
             </div>
