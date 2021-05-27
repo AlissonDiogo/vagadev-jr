@@ -1,0 +1,32 @@
+.footer {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.footer > div {
+  display: inline-block;
+  height: 100%;
+}
+.footer .left-part {
+  width: 20%;
+  text-align: right;
+  background-color: #084154;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footer .left-part img {
+  padding-right: 20px;
+}
+.footer .right-part {
+  width: 80%;
+  background-color: #3ec6e0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: right;
+  padding-left: 20px;
+  color: #ffffff;
+}
