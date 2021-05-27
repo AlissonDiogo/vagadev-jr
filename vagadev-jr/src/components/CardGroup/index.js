@@ -13,6 +13,7 @@ function CardGroup(props) {
           title={item.title}
           price={item.price}
           key={index}
+          onClickBuy={props.onClickBuy}
         />
       ))}
     </div>

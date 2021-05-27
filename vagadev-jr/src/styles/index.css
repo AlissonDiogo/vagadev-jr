@@ -76,3 +76,23 @@ main .container-main {
   font-size: 25px;
   font-weight: 300;
 }
+
+fieldset.text-divisor {
+  border-top: 1px solid #333;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  display: block;
+  text-align: center;
+}
+
+fieldset.text-divisor legend {
+  padding: 5px 10px;
+}
+.finished-order legend {
+  font-size: 20px;
+  font-weight: 300;
+}
+.finished-order img {
+  transform: translateY(4px);
+}

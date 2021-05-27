@@ -22,7 +22,9 @@ function CardProduct(props) {
           {/* {"R$ " + toMoney(123)} */}
         </div>
         <div className="container-buy-button">
-          <button className="buy-button">COMPRAR</button>
+          <button className="buy-button" onClick={() => props.onClickBuy()}>
+            COMPRAR
+          </button>
         </div>
       </div>
     </div>

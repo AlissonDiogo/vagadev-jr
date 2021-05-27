@@ -1,8 +1,10 @@
+import { useState } from "react";
 //components
 import Navbar from "./components/Navbar";
 import CardApresentation from "./components/CardApresentation";
 import CardGroup from "./components/CardGroup";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 
 import imageBanner1 from "./assets/img/principal_banner_desktop.jpg";
 import imageZelda from "./assets/img/zelda_banner.jpg";
@@ -11,10 +13,13 @@ import pointGroup from "./assets/svgs/pointGroup.svg";
 import product1 from "./assets/img/product-outriders.png";
 import product2 from "./assets/img/product-cyberpunk2077.png";
 import product3 from "./assets/img/product-donkey-kong-country.png";
+import marioImage from "./assets/img/marioImage.png";
 
 import "./styles/index.css";
 
 function App() {
+  const [visibleModal, setVisibleModal] = useState(false);
+
   const dataItensApresentation = [
     { image: imageZelda, legend: "The legend of Zelda - Breath of the wild" },
     { image: imageSekiro, legend: "SEKIRO - Shadows die twice" },
@@ -42,7 +47,7 @@ function App() {
       <Navbar />
       <div className="header">
         <div className="banner">
-          <img src={imageBanner1} alt="Imagem banner"/>
+          <img src={imageBanner1} alt="Imagem banner" />
           <div className="container-text">
             <h2 className="title-banner">MORTAL KOMBAT</h2>
             <h1 className="price-banner">
@@ -84,11 +89,24 @@ function App() {
                 title={"CYBERPUNK 2077"}
                 price={200}
               /> */}
-              <CardGroup data={dataProducts} />
+              <CardGroup
+                data={dataProducts}
+                onClickBuy={() => setVisibleModal(true)}
+              />
             </div>
           </div>
         </div>
       </main>
+      <Modal visible={visibleModal} onClose={() => setVisibleModal(false)}>
+        <div className="finished-order">
+          <fieldset className="text-divisor ">
+            <legend>Pedido realizado com sucesso!</legend>
+          </fieldset>
+          <div style={{ textAlign: "center" }}>
+            <img src={marioImage} alt="Imagem mário" />
+          </div>
+        </div>
+      </Modal>
       <Footer />
     </div>
   );
