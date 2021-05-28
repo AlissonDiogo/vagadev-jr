@@ -4,7 +4,6 @@ import CardProduct from "../CardProduct";
 import "./cardGroup.css";
 
 function CardGroup(props) {
-  console.log(props);
   return (
     <div className="card-group">
       {props.data.map((item, index) => (
