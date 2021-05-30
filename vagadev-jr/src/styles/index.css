@@ -5,13 +5,13 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-.banner > img {
-  width: 100vw;
+.banner img {
+  width: 100%;
 }
 .banner > .container-text {
   color: #ebebeb;
   position: absolute;
-  right: 20%;
+  right: 10%;
   top: 20%;
 }
 .banner > .container-text > .title-banner,
@@ -95,4 +95,21 @@ fieldset.text-divisor legend {
 }
 .finished-order img {
   transform: translateY(4px);
+}
+.container-images-carousel {
+  display: block;
+}
+.container-images-carousel-mobile {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .banner img {
+    /* height: 100%; */
+  }
+  .container-images-carousel {
+    display: none;
+  }
+  .container-images-carousel-mobile {
+    display: block;
+  }
 }

@@ -10,9 +10,11 @@ import shoppingBag from "../../assets/svgs/shopping-bag-solid.svg";
 
 import "./navbar.css";
 
-function Navbar() {
+function Navbar(props) {
   const [visibleMenu, setVisibleMenu] = useState(false);
   const [scrollValue, setScrollValue] = useState(window.scrollY);
+  const [searchValue, setSearchValue] = useState("");
+  const [visibleSearch, setVisibleSearch] = useState(false);
 
   useEffect(() => {
     return (window.onscroll = () => setScrollValue(window.scrollY));
@@ -32,6 +34,11 @@ function Navbar() {
       itens: ["NEED For SPEED", "Forza Horizon"],
     },
   ];
+
+  const onSearch = (value) => {
+    setSearchValue(value);
+    props.onSearch(value);
+  };
   return (
     <nav
       className={
@@ -61,7 +68,7 @@ function Navbar() {
               className="paperPlane"
               alt="Ícone referente ao contato"
             />
-            <span>CONTATO</span>
+            <span className="nav-item-label">CONTATO</span>
           </li>
           <span className="divider" />
           <li>
@@ -69,8 +76,26 @@ function Navbar() {
               src={search}
               className="search"
               alt="Ícone referente ao buscador"
+              onClick={() => setVisibleSearch(!visibleSearch)}
             />
-            <span>BUSCAR</span>
+            <span
+              onClick={() => setVisibleSearch(!visibleSearch)}
+              className="nav-item-label"
+            >
+              BUSCAR
+            </span>
+
+            <div
+              className={
+                visibleSearch ? "search-container visible" : "search-container"
+              }
+            >
+              <input
+                className="search-input"
+                value={searchValue}
+                onChange={(e) => onSearch(e.target.value)}
+              />
+            </div>
           </li>
           <span className="divider" />
           <li>

@@ -35,3 +35,24 @@
   border-right: 12px solid transparent;
   border-left: 12px solid transparent;
 }
+
+@media screen and (max-width: 600px) {
+  .float-menu {
+    position: absolute;
+    background-color: #084154;
+    text-align: left;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 0;
+    box-shadow: 0;
+    border: 0;
+    left: 0;
+    top: 10;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+  }
+  .float-menu:after {
+    display: none;
+  }
+}

@@ -12,14 +12,12 @@
 .container-nav.active-scroll {
   background-color: rgba(235, 235, 235, 1);
 }
-/* .container-nav.active-scroll li {
-  color: #000;
-} */
 .container-nav li {
   list-style-type: none;
   display: inline-block;
   color: #fff;
   vertical-align: middle;
+  cursor: pointer;
 }
 .container-nav li .menu {
   width: 20px;
@@ -59,4 +57,76 @@
   border: 1px solid #ffffff;
   height: 20px;
   margin: 0px 20px 0px 20px;
+  display: initial;
+}
+
+.search-container {
+  display: none;
+  position: absolute;
+  padding: 20px;
+  /* width: 200px; */
+  background-color: #084154;
+  border-radius: 10px;
+}
+.search-container.visible {
+  display: block;
+}
+
+.search-container input {
+  border-radius: 5px;
+  padding: 6px;
+  border: 1px solid #3ec6e0;
+  /* width: 100%; */
+}
+
+.search-container:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 10%;
+  margin-left: -2%;
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid #084154;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+@media screen and (max-width: 600px) {
+  .container-nav {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+    padding: 10px;
+    background-color: #084154;
+  }
+  .container-nav ul {
+    padding: 0;
+    margin: 0;
+  }
+  .nav-item-label {
+    display: none;
+  }
+  .container-nav li {
+    margin-right: 15px;
+  }
+  .divider {
+    display: none;
+  }
+  .container-nav li .menu {
+    width: 30px;
+    margin-right: 0px;
+  }
+  .container-nav li .logo {
+    width: 120px;
+  }
+  .container-nav li .paperPlane {
+    width: 40px;
+  }
+  .container-nav li .search {
+    width: 30px;
+  }
+  .container-nav li .shoppingBag {
+    width: 30px;
+  }
 }
