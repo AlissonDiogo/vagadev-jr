@@ -98,7 +98,7 @@
     justify-content: unset;
     align-items: center;
     padding: 10px;
-    background-color: #084154;
+    background-color: #084154 !important;
   }
   .container-nav ul {
     padding: 0;
@@ -128,5 +128,28 @@
   }
   .container-nav li .shoppingBag {
     width: 30px;
+  }
+
+  .search-container {
+    left: 20%;
+    z-index: 1001;
+  }
+}
+@media screen and (max-width: 370px) {
+  .container-nav li .menu {
+    width: 20px;
+    margin-right: 0px;
+  }
+  .container-nav li .logo {
+    width: 100px;
+  }
+  .container-nav li .paperPlane {
+    width: 30px;
+  }
+  .container-nav li .search {
+    width: 20px;
+  }
+  .container-nav li .shoppingBag {
+    width: 20px;
   }
 }

@@ -36,6 +36,10 @@
   border-left: 12px solid transparent;
 }
 
+.list-container {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .float-menu {
     position: absolute;
@@ -54,5 +58,28 @@
   }
   .float-menu:after {
     display: none;
+  }
+  .float-menu table {
+    display: none;
+  }
+  .list-container {
+    display: block;
+  }
+  .list-container h2 {
+    margin: 0px 0px 10px 0px;
+  }
+  .list-container .divisor {
+    border-bottom: 1px solid #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .list-container li {
+    display: list-item !important;
+    padding: 6px;
+    border-radius: 6px;
+    width: 60%;
+  }
+  .list-container li:hover {
+    background-color: #3ec6e0;
   }
 }

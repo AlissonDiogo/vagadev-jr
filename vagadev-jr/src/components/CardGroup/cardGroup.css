@@ -2,5 +2,41 @@
   display: grid;
   grid-gap: 50px;
   grid-auto-flow: row;
-  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.container-group-cards {
+  display: block;
+}
+.container-group-cards-mobile {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .card-group {
+    grid-template-columns: 1fr;
+  }
+  .container-group-cards {
+    display: none;
+  }
+  .container-group-cards-mobile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .container-group-cards-mobile .card-container{
+    width: 85%;
+  }
+  .container-group-cards-mobile > img {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 30px;
+    cursor: pointer;
+  }
+  .container-group-cards-mobile > img:first-child {
+    left: 0;
+  }
+  .container-group-cards-mobile > img:last-child {
+    right: 0;
+  }
 }

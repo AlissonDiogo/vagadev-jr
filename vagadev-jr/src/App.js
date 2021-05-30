@@ -5,7 +5,6 @@ import CardApresentation from "./components/CardApresentation";
 import CardGroup from "./components/CardGroup";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
-// import Slider from "react-slick";
 import Carousel from "@brainhubeu/react-carousel";
 import CarouselControl from "./components/CarouselControl";
 
@@ -23,8 +22,6 @@ import marioImage from "./assets/img/marioImage.png";
 
 import "./styles/index.css";
 import "@brainhubeu/react-carousel/lib/style.css";
-// import "~slick-carousel/slick/slick.css";
-// import "~slick-carousel/slick/slick-theme.css";
 
 const dataProductsOriginal = [
   {
@@ -64,14 +61,6 @@ function App() {
     } else {
       setDataProducts(dataProductsOriginal);
     }
-  };
-
-  const settings = {
-    dots: true,
-    // infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
   };
 
   return (
@@ -124,12 +113,6 @@ function App() {
               onChangeLeft={() => setValueCarousel(valueCarousel === 1 ? 0 : 1)}
             />
           </div>
-          {/* <div>
-            <img src={imageBanner1} alt="Imagem banner" />
-          </div>
-          <div>
-            <img src={imageBanner2} alt="Imagem banner" />
-          </div> */}
 
           <div className="container-text">
             <h2 className="title-banner">MORTAL KOMBAT</h2>

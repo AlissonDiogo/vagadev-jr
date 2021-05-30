@@ -46,6 +46,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 main .container-main {
   width: 60%;
 }
@@ -103,6 +104,9 @@ fieldset.text-divisor legend {
   display: none;
 }
 @media screen and (max-width: 600px) {
+  .banner {
+    position: relative;
+  }
   .banner img {
     /* height: 100%; */
   }
@@ -111,5 +115,62 @@ fieldset.text-divisor legend {
   }
   .container-images-carousel-mobile {
     display: block;
+  }
+  .banner > .container-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 0;
+    top: 55%;
+    padding: 10px;
+  }
+
+  .banner > .container-text > .title-banner {
+    font-size: 20px;
+  }
+
+  .banner > .container-text > .price-banner {
+    font-size: 30px;
+    color: #3ec6e0;
+  }
+  .banner > .container-text > .price-banner p {
+    font-size: 18px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .banner > .container-text > .description-banner {
+    font-size: 11px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .itens-apresentation > .container-itens {
+    position: unset;
+    top: -100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main .container-main {
+    width: 90%;
+  }
+  .itens-apresentation > .container-itens {
+    position: relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products {
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+  .products > .products-header {
+    margin: 0px 0px 60px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Menu from "../Menu";
 
 import iconHamburguer from "../../assets/svgs/icon_hamburguer.svg";
+import iconClose from "../../assets/img/close-window.png";
 import logo from "../../assets/svgs/Logo_N1_Rush.svg";
 import paperPlane from "../../assets/svgs/paper-plane.svg";
 import search from "../../assets/svgs/search-solid.svg";
@@ -49,7 +50,7 @@ function Navbar(props) {
         <ul>
           <li>
             <img
-              src={iconHamburguer}
+              src={visibleMenu ? iconClose : iconHamburguer}
               alt="menu"
               className="menu"
               onClick={() => setVisibleMenu(!visibleMenu)}

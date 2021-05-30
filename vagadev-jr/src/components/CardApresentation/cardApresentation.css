@@ -1,6 +1,6 @@
 .card-apresentation {
   width: 400px;
-  display: inline-block; 
+  display: inline-block;
 }
 .card-apresentation > img {
   width: 100%;
@@ -25,4 +25,11 @@
   height: 1px;
   border-top: 1px solid #000;
   margin-right: 15px;
+}
+@media screen and (max-width: 600px) {
+  .card-apresentation {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
 }

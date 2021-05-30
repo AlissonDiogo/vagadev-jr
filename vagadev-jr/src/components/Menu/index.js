@@ -53,6 +53,25 @@ function Menu(props) {
           })}
         </tbody>
       </table>
+
+      <div className="list-container">
+        {props.data.map((item, index) => {
+          return (
+            <div key={index}>
+              <h2>{item.title}</h2>
+              <ul>
+                {item.itens.map((item2, index2) => (
+                  <li key={index2}>{item2}</li>
+                ))}
+              </ul>
+              {index < props.data.length - 1 ? (
+                <div className="divisor"></div>
+              ) : null}
+            </div>
+          );
+        })}
+        <ul></ul>
+      </div>
     </div>
   );
 }

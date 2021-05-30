@@ -73,3 +73,8 @@
   position: absolute;
   top: -40px;
 }
+@media screen and (max-width: 600px) {
+  .card-container {
+    display: inline-block;
+  }
+}
