@@ -38,26 +38,28 @@ function CardGroup(props) {
           </div>
         );
       })}
-      <div className="container-group-cards-mobile">
-        <img
-          src={arrowLeft}
-          alt="Seta para voltar um item"
-          onClick={() => onChangeContItensLeft()}
-        />
+      {props.data.length > 0 ? (
+        <div className="container-group-cards-mobile">
+          <img
+            src={arrowLeft}
+            alt="Seta para voltar um item"
+            onClick={() => onChangeContItensLeft()}
+          />
 
-        <CardProduct
-          image={props.data.slice(contItens, contItens + 1)[0].image}
-          title={props.data.slice(contItens, contItens + 1)[0].title}
-          price={props.data.slice(contItens, contItens + 1)[0].price}
-          onClickBuy={props.onClickBuy}
-        />
+          <CardProduct
+            image={props.data.slice(contItens, contItens + 1)[0]?.image}
+            title={props.data.slice(contItens, contItens + 1)[0]?.title}
+            price={props.data.slice(contItens, contItens + 1)[0]?.price}
+            onClickBuy={props.onClickBuy}
+          />
 
-        <img
-          src={arrowRight}
-          alt="Seta para avançar um item"
-          onClick={() => onChangeContItensRight()}
-        />
-      </div>
+          <img
+            src={arrowRight}
+            alt="Seta para avançar um item"
+            onClick={() => onChangeContItensRight()}
+          />
+        </div>
+      ) : null}
     </div>
   );
 }

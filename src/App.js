@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 //components
 import Navbar from "./components/Navbar";
 import CardApresentation from "./components/CardApresentation";
@@ -45,22 +45,25 @@ function App() {
   const [visibleModal, setVisibleModal] = useState(false);
   const [dataProducts, setDataProducts] = useState(dataProductsOriginal);
   const [valueCarousel, setValueCarousel] = useState(0);
+  const refDivToScroll = useRef(null);
 
   const dataItensApresentation = [
     { image: imageZelda, legend: "The legend of Zelda - Breath of the wild" },
     { image: imageSekiro, legend: "SEKIRO - Shadows die twice" },
   ];
 
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+
   const onSearch = (value) => {
     if (value.length > 0) {
       let newData = dataProductsOriginal.filter((item) =>
         item.title.toUpperCase().includes(value.toUpperCase())
       );
-      console.log(value);
       setDataProducts(newData);
     } else {
       setDataProducts(dataProductsOriginal);
     }
+    scrollToRef(refDivToScroll);
   };
 
   return (
@@ -144,7 +147,7 @@ function App() {
               })}
             </div>
           </div>
-          <div className="products">
+          <div className="products" ref={refDivToScroll}>
             <div className="products-header">
               <img src={pointGroup} alt="Marcador" />{" "}
               <span> Produtos em destaque</span>
